@@ -1,138 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Predstavitev sodobnega Bootstrap spletišča.">
+    <meta name="keywords" content="Bootstrap, odzivno oblikovanje, mrežni sistem, komponente, dokumentacija">
+    <meta name="author" content="eNSA">
+    <title>eNSA | Spletišče: Domača stran</title>
+    <link rel="icon" href="slike/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header >
-        <nav><div ><img src="https://nsa-splet.si/splet-primer/slike/index/logo.png"></div></nav>
-        <button><span class="navbar-icon"></span></button>
-
-        <div>
-            <ul>
-                <li class="nav-item"><a href="">Domov</a></li>
-                <li class="nav-item"><a href="">Bootstrap</a></li>
-                <li class="nav-item"><a href=""></a>
-                    <ul>
-                        <li><a>Kako začeti</a></li>
-                        <li><a>Postavitev</a></li>
-                        <li><a>Vsebina</a></li>
-                        <li><a>Komponente</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a href="">Vodiči</a></li>
-                <li class="nav-item"><a href="">Kontakt</a></li>
-                <li class="nav-item"><a href="">Blog</a></li>
-            </ul>
-        </div>
-    </header>
-
-    <main>
-        <div>
-            <h4>Bootstrap 5 predstavitev</p>
-            <h1>Sodoben okvir za odzivna in mobilno prilagojena spletišča</h1>
-            <p>Bootstrap združuje pripravljen mrežni sistem, komponente in uporabne razrede, s katerimi hitreje zgradiš pregleden vmesnik brez ponavljajočega se CSS-ja.</p>
-            <div>
-                <button>Kako začeti</button>
-                <button>Preogled ogrodja</button>
+    <nav class="navbar navbar-expand-lg navbar-light site-navbar sticky-top">
+        <div class="container"><a class="navbar-brand" href="index.html"><img src="slike/index/logo.png"
+                    alt="eNSA logotip"></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#meni" aria-controls="meni" aria-expanded="false" aria-label="Preklopi navigacijo"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="meni">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Domov</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="docsMenu"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">Dokumentacija</a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="dokument/zacetek.html">Kako začeti</a></li>
+                            <li><a class="dropdown-item" href="dokument/postavitev.html">Postavitev</a></li>
+                            <li><a class="dropdown-item" href="dokument/vsebina.html">Vsebina</a></li>
+                            <li><a class="dropdown-item" href="dokument/komponente.html">Komponente</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="vodici.html">Vodiči</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                </ul>
             </div>
-
-            <!--NEK BOOTSTRAT BULLSHIT-->
         </div>
+    </nav>
 
-        <div>
-            <h2>Kaj uporabljamo</h2>
-            <p>Bootstrap najbolje zaživi, ko ga povežemo s temeljnimi spletnimi tehnologijami.</p>
-            
-            <div> <!--UNE 4-->
-                <div>
-                    <div>
-                        <img src="https://nsa-splet.si/splet-primer/slike/index/html5.png">
-                        <h3>HTML5</h3>
+    <section class="hero pb-0">
+        <div class="container">
+            <div class="row align-items-center g-4 pb-4">
+                <div class="col-lg-6">
+                    <span class="badge-soft mb-3 d-inline-block">Bootstrap 5 predstavitev</span>
+                    <h1 class="hero-title display-5">Sodoben okvir za odzivna in mobilno prilagojena spletišča</h1>
+                    <p class="lead">Bootstrap združuje pripravljen mrežni sistem, komponente in uporabne razrede, s
+                        katerimi hitreje zgradiš pregleden vmesnik brez ponavljajočega se CSS-ja.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a class="btn btn-primary btn-lg" href="dokument/zacetek.html">Kako začeti</a>
+                        <a class="btn btn-outline-primary btn-lg" href="bootstrap.html">Pregled ogrodja</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div id="uvodCarousel" class="carousel slide hero-card overflow-hidden" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#uvodCarousel" data-bs-slide-to="0"
+                                class="active"></button>
+                            <button type="button" data-bs-target="#uvodCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#uvodCarousel" data-bs-slide-to="2"></button>
+                        </div>
+                        <br>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="https://nsa-splet.si/splet-primer/slike/index/bs_slide1.png"
+                                    alt="Uvod v Bootstrap">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>Hitro postavi odzivno osnovo za projekt.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item"><img src="https://nsa-splet.si/splet-primer/slike/index/bs_slide2.png" alt="Komponente Bootstrap">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>Uporabi pripravljene komponente in razrede.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item"><img src="https://nsa-splet.si/splet-primer/slike/index/bs_slide3.png"
+                                    alt="Mrežni sistem Bootstrap">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>Mrežni sistem razporejanje vsebine.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#uvodCarousel"
+                            data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span
+                                class="visually-hidden">Nazaj</span></button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#uvodCarousel"
+                            data-bs-slide="next"><span class="carousel-control-next-icon"></span><span
+                                class="visually-hidden">Naprej</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Kaj uporabljamo</h2>
+            <p class="lead mb-5">Bootstrap najbolje zaživi, ko ga povežemo s temeljnimi spletnimi tehnologijami.</p>
+            <div class="row g-4">
+                <div class="col-6 col-lg-3">
+                    <div class="feature-card card p-4 text-center"><img src="https://nsa-splet.si/splet-primer/slike/index/html5.png" alt="HTML5"
+                            class="tech-logo mx-auto mb-3">
+                        <h3 class="h5">HTML5</h3>
                         <p>Semantična struktura strani, obrazci, medijski elementi in osnova za komponente.</p>
                     </div>
                 </div>
-
-                <div>
-                    <div>
-                        <img src="https://nsa-splet.si/splet-primer/slike/index/css3.png">
-                        <h3>CSS3</h3>
+                <div class="col-6 col-lg-3">
+                    <div class="feature-card card p-4 text-center"><img src="https://nsa-splet.si/splet-primer/slike/index/css3.png" alt="CSS3"
+                            class="tech-logo mx-auto mb-3">
+                        <h3 class="h5">CSS3</h3>
                         <p>Barve, tipografija, animacije in prilagoditve, ki nadgradijo privzeti videz ogrodja.</p>
                     </div>
                 </div>
-
-                <div>
-                    <div>
-                        <img src="https://nsa-splet.si/splet-primer/slike/index/js.png">
-                        <h3>JavaScript</h3>
+                <div class="col-6 col-lg-3">
+                    <div class="feature-card card p-4 text-center"><img src="https://nsa-splet.si/splet-primer/slike/index/js.png" alt="JavaScript"
+                            class="tech-logo mx-auto mb-3">
+                        <h3 class="h5">JavaScript</h3>
                         <p>Interaktivnost za modalna okna, offcanvas menije, vrtiljake in validacijo vmesnika.</p>
                     </div>
                 </div>
-
-                <div>
-                    <div>
-                        <img src="https://nsa-splet.si/splet-primer/slike/index/bootstrap.png">
-                        <h3>Bootstrap</h3>
-                        <p>InterPripravljene komponente, mrežni sistem in utility razredi za hiter razvoj.</p>
+                <div class="col-6 col-lg-3">
+                    <div class="feature-card card p-4 text-center"><img src="https://nsa-splet.si/splet-primer/slike/index/bootstrap.png" alt="Bootstrap"
+                            class="tech-logo mx-auto mb-3">
+                        <h3 class="h5">Bootstrap</h3>
+                        <p>Pripravljene komponente, mrežni sistem in utility razredi za hiter razvoj.</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div>
-            <h2>Sass in Less</h2>
-            <p>Bootstrap je tesno povezan s predprocesorjem Sass, saj so v njem zapisane spremenljivke, mixini in zemljevidi prelomnih točk. To olajša prilagajanje barv, razmikov in tipografije brez ročnega popravljanja vsake komponente posebej.</p>
-            <br>
-            <p>V starejših projektih se lahko srečamo tudi z Lessom. Čeprav ga novejše različice Bootstrapa ne uporabljajo več kot privzeto rešitev, je dobro poznati razliko med preteklimi in sodobnimi delovnimi tokovi pri gradnji slogovnih datotek.</p>
-
-            <img src="https://nsa-splet.si/splet-primer/slike/index/sass.png">
-            
-            <br>
-
-            <img src="https://nsa-splet.si/splet-primer/slike/index/less.png">
-
-            <h2>Zakaj je to pomembno?</h2>
-            <br>
-            <p>S pomočjo spremenljivk hitro uskladimo videz celotnega spletišča. Enotna barvna paleta, nadzor nad razmiki in možnost sestavljanja manjših slogovnih modulov pomenijo hitrejše delo, manj napak in lažje vzdrževanje.</p>
-            <br>
-            <p>Pri učenju Bootstrapa je zato smiselno razumeti tako delo z že pripravljenimi razredi kot tudi, kako ogrodje prilagodimo z lastnimi slogovnimi pravili.</p>
+    <section class="section-accent py-5">
+        <div class="container">
+            <div class="row g-4 align-items-center mb-4">
+                <div class="col-lg-8">
+                    <h2 class="section-title">Sass in Less</h2>
+                    <p>Bootstrap je tesno povezan s predprocesorjem Sass, saj so v njem zapisane spremenljivke, mixini
+                        in zemljevidi prelomnih točk. To olajša prilagajanje barv, razmikov in tipografije brez ročnega
+                        popravljanja vsake komponente posebej.</p>
+                    <p>V starejših projektih se lahko srečamo tudi z Lessom. Čeprav ga novejše različice Bootstrapa ne
+                        uporabljajo več kot privzeto rešitev, je dobro poznati razliko med preteklimi in sodobnimi
+                        delovnimi tokovi pri gradnji slogovnih datotek.</p>
+                </div>
+                <div class="col-lg-4 text-center"><img src="https://nsa-splet.si/splet-primer/slike/index/sass.png" alt="Sass"
+                        class="img-fluid rounded-4 shadow-sm"></div>
+            </div>
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-8 order-lg-1 order-2">
+                    <h3 class="h2 section-title">Zakaj je to pomembno?</h3>
+                    <p>S pomočjo spremenljivk hitro uskladimo videz celotnega spletišča. Enotna barvna paleta, nadzor
+                        nad razmiki in možnost sestavljanja manjših slogovnih modulov pomenijo hitrejše delo, manj napak
+                        in lažje vzdrževanje.</p>
+                    <p>Pri učenju Bootstrapa je zato smiselno razumeti tako delo z že pripravljenimi razredi kot tudi,
+                        kako ogrodje prilagodimo z lastnimi slogovnimi pravili.</p>
+                </div>
+                <div class="col-lg-4 order-lg-2 order-1 text-center"><img src="https://nsa-splet.si/splet-primer/slike/index/less.png" alt="Less"
+                        class="img-fluid rounded-4 shadow-sm"></div>
+            </div>
         </div>
+    </section>
 
-        <div>
-            <h2>Mnenja naših uporabnikov</h2>
-            <!--MNENJA UPORABNIKOV-->
-            <div>
-                <div>
-                    <img src="https://nsa-splet.si/splet-primer/slike/index/oseba1.png">
-                    <p>Bootstrap mi je pomagal, da sem prvi odzivni prototip postavil bistveno hitreje. Največja prednost je jasen mrežni sistem in dobra dokumentacija.</p>
-                    <p>Janez Novak</p>
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="section-title">Mnenja naših uporabnikov</h2>
+            <div class="row g-4 mt-1">
+                <div class="col-md-4">
+                    <div class="quote-card feature-card card p-4"><img src="https://nsa-splet.si/splet-primer/slike/index/oseba1.png" alt="Ana"
+                            class="mx-auto mb-3">
+                        <p>Bootstrap mi je pomagal, da sem prvi odzivni prototip postavil bistveno hitreje. Največja
+                            prednost je jasen mrežni sistem in dobra dokumentacija.</p>
+                        <p class="quote-name mb-0">Janez Novak</p>
+                    </div>
                 </div>
-
-                <div>
-                    <img src="https://nsa-splet.si/splet-primer/slike/index/oseba3.png">
-                    <p>Pri poučevanju je zelo uporaben, ker študenti hitro vidijo razliko med strukturo HTML, uporabnimi razredi in lastnim CSS-jem.</p>
-                    <p>Miha P.</p>
+                <div class="col-md-4">
+                    <div class="quote-card feature-card card p-4"><img src="https://nsa-splet.si/splet-primer/slike/index/oseba3.png" alt="Miha"
+                            class="mx-auto mb-3">
+                        <p>Pri poučevanju je zelo uporaben, ker študenti hitro vidijo razliko med strukturo HTML,
+                            uporabnimi razredi in lastnim CSS-jem.</p>
+                        <p class="quote-name mb-0">Miha P.</p>
+                    </div>
                 </div>
-
-                <div>
-                    <img src="https://nsa-splet.si/splet-primer/slike/index/oseba2.png">
-                    <p>Ko potrebujem hitro in dosledno oblikovano administracijo, so pripravljene komponente in obrazci velika prihranitev časa.</p>
-                    <p>Tina Buh</p>
+                <div class="col-md-4">
+                    <div class="quote-card feature-card card p-4"><img src="https://nsa-splet.si/splet-primer/slike/index/oseba2.png" alt="Tina"
+                            class="mx-auto mb-3">
+                        <p>Ko potrebujem hitro in dosledno oblikovano administracijo, so pripravljene komponente in
+                            obrazci velika prihranitev časa.</p>
+                        <p class="quote-name mb-0">Tina Buh</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
 
     <footer>
-        <div>
-            <div>
-                <!--LOGOTI-->
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6">
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fa fa-facebook-square fa-2x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fa fa-youtube-square fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">&copy; eNSA Bootstrap, 2026</div>
             </div>
-
-            <p>© eNSA Bootstrap, 2026</p>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
